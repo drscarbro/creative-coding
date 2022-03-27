@@ -9,7 +9,20 @@
 <body>
     <canvas height="600" width="600"></canvas>
     <script>
-        
+        let canvas = document.querySelector("canvas");
+        let context = canvas.getContext("2d");
+
+        for(let i = 0; i < 5; i++){
+            let height = 60;
+            let width = 40;
+            let gap = 20;
+            let x = 100 + (width + gap)*i;
+            let y = 100;
+            context.lineWidth = 4
+            context.beginPath();
+            context.rect(x, y, width, height);
+            context.stroke();
+        }
     </script>
 </body>
 </html>
