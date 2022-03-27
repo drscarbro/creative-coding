@@ -8,6 +8,23 @@
 <body>
     <canvas height="600" width="600"></canvas>
     <script>
+        // select canvas element and create context
+        let canvas = document.querySelector("canvas");
+        let context = canvas.getContext("2d");
+        let x = 100;
+        let y = 100;
+        let height = 400;
+        let width = 400;
+        let center = x+(width/2);
+
+        // create a blue square that is 400x400 px
+        context.lineWidth = 4;
+        context.fillStyle = "blue";
+        // create a border of the square
+        context.beginPath();
+        context.rect(x, y, height, width);
+        context.fill();
+        context.stroke();
     </script>
 </body>
 </html>
