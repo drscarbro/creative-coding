@@ -9,17 +9,21 @@
 <body>
     <canvas height="600" width="600"></canvas>
     <script>
+        // create canvas context
         let canvas = document.querySelector("canvas");
         let context = canvas.getContext("2d");
+        
+        // declare variables for shape dimensions
+        const height = 60;
+        const width = 60;
+        const gap = 20;
+        let padding = 24;
+        let x, y;
 
         for(let i = 0; i < 5; i++){
             for(let j = 0; j < 5; j++){
-                let height = 60;
-                let width = 60;
-                let gap = 20;
-                let x = 100 + (width + gap) * i;
-                let y = 100 + (height + gap) * j;
-                let padding = 32;
+                x = 100 + (width + gap) * i;
+                y = 100 + (height + gap) * j;
                 // draw square
                 context.lineWidth = 4
                 context.beginPath();
