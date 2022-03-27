@@ -19,9 +19,15 @@
                 let gap = 20;
                 let x = 100 + (width + gap) * i;
                 let y = 100 + (height + gap) * j;
+                let padding = 32;
+                // draw square
                 context.lineWidth = 4
                 context.beginPath();
                 context.rect(x, y, width, height);
+                context.stroke();
+                // draw a small square inside the first
+                context.beginPath();
+                context.rect(x + (padding/2), y + (padding/2), width - padding, height - padding);
                 context.stroke();
             }
         }
