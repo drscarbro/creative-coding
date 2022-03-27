@@ -25,6 +25,14 @@
         context.rect(x, y, height, width);
         context.fill();
         context.stroke();
+        // create a cirle inside the square
+        context.lineWidth = 10;
+        context.fillStyle = "white";
+        context.beginPath();
+        // center the circle
+        context.arc(center, center, x, 0, Math.PI*2);
+        context.fill();
+        context.stroke();
     </script>
 </body>
 </html>
