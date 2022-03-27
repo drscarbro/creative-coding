@@ -26,7 +26,7 @@
                 context.rect(x, y, width, height);
                 context.stroke();
                 // draw small square in 2nd, 3rd, and 4th cols only
-                if(i > 0 && i < 4){
+                if(Math.random() > 0.50){
                     // draw a small square inside the first
                     context.beginPath();
                     context.rect(x + (padding/2), y + (padding/2), width - padding, height - padding);
