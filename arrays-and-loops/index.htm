@@ -13,15 +13,17 @@
         let context = canvas.getContext("2d");
 
         for(let i = 0; i < 5; i++){
-            let height = 60;
-            let width = 40;
-            let gap = 20;
-            let x = 100 + (width + gap)*i;
-            let y = 100;
-            context.lineWidth = 4
-            context.beginPath();
-            context.rect(x, y, width, height);
-            context.stroke();
+            for(let j = 0; j < 5; j++){
+                let height = 60;
+                let width = 60;
+                let gap = 20;
+                let x = 100 + (width + gap) * i;
+                let y = 100 + (height + gap) * j;
+                context.lineWidth = 4
+                context.beginPath();
+                context.rect(x, y, width, height);
+                context.stroke();
+            }
         }
     </script>
 </body>
